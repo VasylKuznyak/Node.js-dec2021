@@ -1,4 +1,4 @@
-// 1.CALLBACKS
+//                                                   1.CALLBACKS
 
 // const fs = require('fs');
 // const path = require('path');
@@ -23,26 +23,30 @@
 //         }
 //     });
 // }
-//ddd
+//
 // sortFolder('boys', 'female', 'girls');
 // sortFolder('girls', 'male', 'boys');
 
-// 2.ASYNC AWAIT
+//                                                   2.ASYNC AWAIT
 
 // const fs = require('fs/promises');
 // const path = require('path');
 //
 // const sortFolders = async (dir, gender, newDir) => {
-//     const files = await fs.readdir(path.join(__dirname, dir));
+//     try {
+//         const files = await fs.readdir(path.join(__dirname, dir));
 //
-//     for (let file of files) {
-//         const pathFile = path.join(__dirname, dir, file);
-//         const data = await fs.readFile(pathFile);
-//         const user = JSON.parse(data.toString());
+//         for (let file of files) {
+//             const pathFile = path.join(__dirname, dir, file);
+//             const data = await fs.readFile(pathFile);
+//             const user = JSON.parse(data.toString());
 //
-//         if (user.gender === gender) {
-//             await fs.rename(pathFile, path.join(__dirname, newDir, file));
+//             if (user.gender === gender) {
+//                 await fs.rename(pathFile, path.join(__dirname, newDir, file));
+//             }
 //         }
+//     }catch (error) {
+//         console.log(error);
 //     }
 // }
 //
