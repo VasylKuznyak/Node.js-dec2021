@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd48592e-e51d-47ad-98ef-28d1f31971e8" name="Changes" comment="done homework 2">
+      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataBases/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/file.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="homework_2(express)" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AFTytLFLvn1Hdsn0YhLGVd3Bq1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.17.6&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.17.6&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/38063/IdeaProjects/Okten Projects/dec/node.js-dec2021/boys&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2021.3.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\38063\IdeaProjects\Okten Projects\dec\node.js-dec2021\boys" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\38063\IdeaProjects\Okten Projects\dec\node.js-dec2021\boys" />
+      <recent name="C:\Users\38063\IdeaProjects\Okten Projects\dec\node.js-dec2021\girls" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd48592e-e51d-47ad-98ef-28d1f31971e8" name="Changes" comment="" />
+      <created>1654604590993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654604590993</updated>
+      <workItem from="1654604592540" duration="25000" />
+      <workItem from="1654607661684" duration="1100000" />
+      <workItem from="1654629953742" duration="4882000" />
+      <workItem from="1654677188447" duration="7049000" />
+      <workItem from="1654696331409" duration="108000" />
+      <workItem from="1654797063581" duration="670000" />
+      <workItem from="1654805564051" duration="6301000" />
+      <workItem from="1654853303700" duration="7357000" />
+      <workItem from="1654865584804" duration="2153000" />
+      <workItem from="1654889346902" duration="6837000" />
+      <workItem from="1654896329337" duration="1746000" />
+      <workItem from="1654898504264" duration="17000" />
+      <workItem from="1654960544965" duration="6518000" />
+      <workItem from="1654982028091" duration="5230000" />
+      <workItem from="1655213537923" duration="762000" />
+      <workItem from="1655223016709" duration="1627000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1654604610858</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654604610858</updated>
+    </task>
+    <task id="LOCAL-00002" summary="homework 1 done">
+      <created>1654684641390</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654684641390</updated>
+    </task>
+    <task id="LOCAL-00003" summary="homework 1 done">
+      <created>1654684687167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654684687167</updated>
+    </task>
+    <task id="LOCAL-00004" summary="clear master">
+      <created>1654684732464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654684732464</updated>
+    </task>
+    <task id="LOCAL-00005" summary="done homework 1">
+      <created>1654685090267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654685090267</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create file homework 2">
+      <created>1654797791920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654797791920</updated>
+    </task>
+    <task id="LOCAL-00007" summary="done homework 2">
+      <created>1654987215922</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654987215922</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="homework 1 done" />
+    <MESSAGE value="clear master" />
+    <MESSAGE value="done homework 1" />
+    <MESSAGE value="create file homework 2" />
+    <MESSAGE value="done homework 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="done homework 2" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
