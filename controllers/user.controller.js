@@ -65,7 +65,7 @@ module.exports = {
 
         const {name, age} = req.body;
 
-        if (name < 2) {
+        if (name.length < 2) {
             return res.status(400).json('Enter valid name');
         }
         if (!Number.isInteger(age)) {
