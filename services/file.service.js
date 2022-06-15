@@ -1,18 +1,21 @@
 const fs = require("fs/promises");
 const path = require("path");
 
+const dbFilePath = path.join(process.cwd(), 'dataBase', 'users.json');
+
 module.exports = {
     read: async () => {
         try {
-            const data = await fs.readFile(path.join(process.cwd(), 'dataBases', 'users.json'));
-            data.toString() ? JSON.parse(data.toString()) : [];
+            const data = await fs.readFile(dbFilePath);
+            return data.toString() ? JSON.parse(data.toString()).sort((a, b) => a.id - b.id) : [];
         } catch (e) {
             console.log(e);
         }
     },
     write: async (data) => {
         try {
-            await fs.writeFile(path.join(process.cwd(), 'dataBases', 'users.json'), JSON.stringify(data));
+            await fs.writeFile(path.join(process.cwd(), 'dataBase', 'users.json'),
+                JSON.stringify(data));
         } catch (e) {
             console.log(e);
         }
