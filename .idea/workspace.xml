@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd48592e-e51d-47ad-98ef-28d1f31971e8" name="Changes" comment="create file homework 3">
-      <change afterPath="$PROJECT_DIR$/controllers/user.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataBase/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/user.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataBases/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/file.service.js" afterDir="false" />
-    </list>
+    <list default="true" id="cd48592e-e51d-47ad-98ef-28d1f31971e8" name="Changes" comment="done homework 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +86,7 @@
       <workItem from="1655213537923" duration="762000" />
       <workItem from="1655223016709" duration="1627000" />
       <workItem from="1655231914317" duration="1517000" />
-      <workItem from="1655294259669" duration="1492000" />
+      <workItem from="1655294259669" duration="1815000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1654604610858</created>
@@ -146,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654987215922</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="done homework 3">
+      <created>1655297323831</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655297323831</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +168,8 @@
     <MESSAGE value="done homework 1" />
     <MESSAGE value="create file homework 2" />
     <MESSAGE value="done homework 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="done homework 2" />
+    <MESSAGE value="done homework 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="done homework 3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

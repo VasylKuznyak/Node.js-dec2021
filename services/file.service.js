@@ -14,8 +14,7 @@ module.exports = {
     },
     write: async (data) => {
         try {
-            await fs.writeFile(path.join(process.cwd(), 'dataBase', 'users.json'),
-                JSON.stringify(data));
+            await fs.writeFile(dbFilePath, JSON.stringify(data));
         } catch (e) {
             console.log(e);
         }
