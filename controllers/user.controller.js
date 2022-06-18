@@ -1,92 +1,51 @@
-const {fileService} = require("../services");
+const {userService} = require("../services");
 
 module.exports = {
-    getAll: async (req, res) => {
-
-        const users = await fileService.read();
-
-        res.json(users);
+    getAll: async (req, res, next) => {
+        try {
+            const users = await userService.getUsers();
+            res.json(users);
+        } catch (e) {
+            next(e);
+        }
     },
 
-    createUser: async (req, res) => {
-
-        const {name, age} = req.body;
-
-        if (!name || name.length < 2) {
-            return res.status(400).json('Enter valid name');
+    getByID: async (req, res, next) => {
+        try {
+            const {user} = req;
+            res.status(200).json(user);
+        } catch (e) {
+            next(e);
         }
-        if (!age || !Number.isInteger(age)) {
-            return res.status(400).json('Enter valid age');
-        }
-
-        const users = await fileService.read();
-
-        const newUser = {...req.body, id: users.length ? users[users.length - 1].id + 1 : 1};
-
-        res.status(201).json(`user ${name} was created`);
-
-        await fileService.write([...users, newUser]);
     },
 
-    getByID: async (req, res) => {
-
-        const {userId} = req.params;
-
-        const users = await fileService.read();
-
-        const user = users.find((user) => user.id === +userId);
-
-        if (!user) {
-            return res.status(404).json(`not found user with id ${userId}`);
+    createUser: async (req, res, next) => {
+        try {
+            const newUser = await userService.createUser(req.body);
+            res.status(201).json(newUser);
+        } catch (e) {
+            next(e);
         }
-
-        res.status(200).json(user);
     },
 
-    deleteById: async (req, res) => {
+    deleteById: async (req, res, next) => {
+        try {
+            const {id} = req.params;
+            await userService.deleteUser({_id: id});
 
-        const {userId} = req.params;
-
-        const users = await fileService.read();
-
-        const index = users.findIndex((user) => user.id === +userId);
-        if (index === -1) {
-            return res.status(404).json(`not found user with id ${userId}`);
+            res.sendStatus(204);
+        } catch (e) {
+            next(e);
         }
-
-        users.splice(index, 1);
-
-        res.status(204).json(`user with id ${userId} was deleted`);
-
-        await fileService.write(users);
     },
 
-    updateById: async (req, res) => {
-
-        const {name, age} = req.body;
-
-        if (name.length < 2) {
-            return res.status(400).json('Enter valid name');
+    updateById: async (req, res, next) => {
+        try {
+            const {id} = req.params;
+            const updateUser = await userService.updateUser({_id: id}, req.body);
+            res.status(201).json(updateUser);
+        } catch (e) {
+            next(e);
         }
-        if (!Number.isInteger(age)) {
-            return res.status(400).json('Enter valid age');
-        }
-        const {userId} = req.params;
-
-        const users = await fileService.read();
-
-        const index = users.findIndex((user) => user.id === +userId);
-        if (index === -1) {
-            return res.status(404).json(`not found user with id ${userId}`);
-        }
-
-        const updatedUser = {...users[index], ...req.body};
-
-        users.splice(index, 1);
-
-        res.status(201).json(`user with id ${userId} successfully updated`);
-
-        await fileService.write([...users, updatedUser]);
-
     }
-}
+};
