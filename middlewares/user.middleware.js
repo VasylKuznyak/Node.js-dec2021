@@ -54,7 +54,7 @@ module.exports = {
             if (name && name.length < 2) {
                 return res.status(400).json('Set valid name');
             }
-
+            req.dateForUpdate = {name, age};
             next();
         } catch (e) {
             next(e);
