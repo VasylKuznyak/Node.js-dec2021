@@ -1,8 +1,8 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
-const {userRouter} = require("./routes");
 const {constants} = require("./constants");
-const mongoose = require("mongoose");
+const {userRouter} = require("./router");
 
 mongoose.connect(constants.MONGO_URL);
 
@@ -13,8 +13,9 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/users', userRouter);
 app.use('*', (req, res) => {
-    res.status(404).json('page not found');
+    res.status(404).json('Page not found');
 });
+
 app.use((err, req, res, next) => {
     res
         .status(err.status || 500)

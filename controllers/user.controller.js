@@ -10,7 +10,7 @@ module.exports = {
         }
     },
 
-    getByID: async (req, res, next) => {
+    getById: async (req, res, next) => {
         try {
             const {user} = req;
             res.status(200).json(user);
@@ -31,8 +31,7 @@ module.exports = {
     deleteById: async (req, res, next) => {
         try {
             const {id} = req.params;
-            await userService.deleteUser({_id: id});
-
+            await userService.deleteUserByID(id);
             res.sendStatus(204);
         } catch (e) {
             next(e);
@@ -42,10 +41,11 @@ module.exports = {
     updateById: async (req, res, next) => {
         try {
             const {id} = req.params;
-            const updateUser = await userService.updateUser({_id: id}, req.dateForUpdate);
-            res.status(201).json(updateUser);
+            const updatedUser = await userService.updateUserByID({_id: id}, req.dateForUpdate);
+            res.status(201).json(updatedUser);
         } catch (e) {
             next(e);
         }
-    }
+    },
+
 };
