@@ -1,48 +1,66 @@
-const {userService} = require("../services");
+const {userService, passwordService} = require("../services");
+const {userPresenter} = require("../presenters");
 
 module.exports = {
-    getAll: async (req, res, next) => {
+
+    getAllUsers: async (req, res, next) => {
         try {
-            const users = await userService.getUsers();
-            res.json(users);
+            const users = await userService.getAll(req.query).exec();
+
+            const userForResponse = users.map((user) => userPresenter.userPresenter(user));
+
+            res.status(200).json(userForResponse);
         } catch (e) {
             next(e);
         }
     },
 
-    getById: async (req, res, next) => {
+    postUser: async (req, res, next) => {
+        try {
+            const hash = await passwordService.hashPassword(req.body.password);
+
+            const newUser = await userService.post({...req.body, password: hash});
+
+            const userForResponse = userPresenter.userPresenter(newUser);
+
+            res.status(201).json(userForResponse);
+        } catch (e) {
+            next(e);
+        }
+    },
+
+    getOneUser: async (req, res, next) => {
         try {
             const {user} = req;
-            res.status(200).json(user);
+
+            const userForResponse = userPresenter.userPresenter(user);
+            res.status(200).json(userForResponse);
         } catch (e) {
             next(e);
         }
     },
 
-    createUser: async (req, res, next) => {
-        try {
-            const newUser = await userService.createUser(req.body);
-            res.status(201).json(newUser);
-        } catch (e) {
-            next(e);
-        }
-    },
-
-    deleteById: async (req, res, next) => {
+    deleteOneUser: async (req, res, next) => {
         try {
             const {id} = req.params;
-            await userService.deleteUserByID(id);
+
+            await userService.delete({_id: id});
+
             res.sendStatus(204);
         } catch (e) {
             next(e);
         }
     },
 
-    updateById: async (req, res, next) => {
+    updateOneUser: async (req, res, next) => {
         try {
             const {id} = req.params;
-            const updatedUser = await userService.updateUserByID({_id: id}, req.dateForUpdate);
-            res.status(201).json(updatedUser);
+
+            const userForUpdate = await userService.update({_id: id}, req.body);
+
+            const userForResponse = userPresenter.userPresenter(userForUpdate);
+
+            res.status(201).json(userForResponse);
         } catch (e) {
             next(e);
         }

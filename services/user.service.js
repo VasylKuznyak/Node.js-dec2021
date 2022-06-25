@@ -1,23 +1,25 @@
 const {User} = require("../dataBase");
 
 module.exports = {
-    getUsers: (params = {}) => {
+
+    getAll: (params = {}) => {
         return User.find(params);
     },
 
-    getUserById: (params = {}) => {
+    getOne: (params = {}) => {
         return User.findOne(params);
     },
 
-    createUser: (user) => {
+    post: (user) => {
         return User.create(user);
     },
 
-    deleteUserByID: (params) => {
+    delete: (params) => {
         return User.deleteOne(params);
     },
 
-    updateUserByID: (params, userData, option = {new: true}) => {
-        return User.findOneAndUpdate(params, userData, option);
+    update: (params, data, options = {new: true}) => {
+        return User.findOneAndUpdate(params, data, options);
     },
+
 };
